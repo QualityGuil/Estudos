@@ -73,8 +73,20 @@ console.log(corredor1);
 console.log(corredor2);
 
 class Jogador extends PilotoFormula1 {
+    // Private
+    #senha = '******';
+
+    getSenha() {
+        return this.#senha;
+    }
+
+    setSenha(novaSenha) {
+        this.#senha = novaSenha;
+    }
 
 }
 
 const jogador1 = new Jogador('Neymar', 'Santos', 33);
-console.log(jogador1);
+jogador1.setSenha('Oprimido dos professores');
+console.log(jogador1.getSenha());
+// console.log(jogador1.#senha); -> Não funciona pois é um atributo privado
