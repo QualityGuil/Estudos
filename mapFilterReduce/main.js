@@ -1,3 +1,4 @@
+// MAP
 const numbers = [1, 2, 3, 4, 5];
 
 // O map executa cada elemento dessa lista e executa um determinado comando. Retornando depois em uma nova lista.
