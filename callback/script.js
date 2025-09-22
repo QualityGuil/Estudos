@@ -27,6 +27,7 @@ const login = newButton('Login', (button) => {
         console.log('btn clicado!');
     });
 });
+
 const singup = newButton('Singup', (button) => {
     // console.log('callback funcionando - singup');
     button.style.cssText = `
@@ -34,6 +35,8 @@ const singup = newButton('Singup', (button) => {
         color: red;
     `;
 });
+
+
 // console.log("login", login);
 // console.log('singup', singup);
 
