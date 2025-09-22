@@ -123,7 +123,7 @@ const resolveRace = Promise.race([p1Race, p2Race, p3Race]).then((data) => {
 
 const userName = 'QualityGuil';
 
-fetch(`https://api.github.com/users/${userName}`, {
+fetch(`https://api.github.com/users/${userName}`, { // header do fetch
     method: 'GET',
     headers: {
         Accept: 'application/vnd.github.v3+json',
