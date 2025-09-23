@@ -1,4 +1,7 @@
 // callback = a function that is passed as an argument to another function.
+// chamada depois de uma determinada ação ocorrer
+
+// utilizada normalmente quando é necessário esperar algo
 
 hello(goodbye);
 // goodbye();
