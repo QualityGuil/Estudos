@@ -14,7 +14,7 @@ const myPromise =  new Promise((resolve, reject) => {
 // Resposta do resolve ou do reject
 myPromise.then((data) => {
     console.log(data);
-})
+});
 
 
 // Exemplo 2
