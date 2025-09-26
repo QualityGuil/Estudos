@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <input type="text" id="campo" value="valor do input">
+
+    <script>
+
+        function getInputValue(id) {
+            const dom = document.getElementById(`${id}`);
+            if (!dom) {
+                throw Error("O id passado por parâmetro não possuí elemento no dom!"); // Criação de um erro
+            }
+            return dom.value;
+        }
+        try {
+            // código com potencial de falha
+            const val = getInputValue('campo-inexistente');
+            alert(val);
+            alert('Fim do programa');
+        } catch (err) { // Quando o código cai nesse erro o que está a baixo do try ainda é executado normalmente
+            // A função que será executada caso ocorra algum erro no bloco try
+            alert('Ocorreu um erro! ' + err.message); // Retorna a mensagem do objeto erro
+            // console.log(e);
+        } finally { // Executado mesmo se o código der erro ou não
+
+        }
+
+        // alert('Fim do programa');
+
+    </script>
+
+</body>
+
+</html>

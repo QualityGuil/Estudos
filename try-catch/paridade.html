@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paridade</title>
+</head>
+
+<body>
+
+    <script>
+
+        function paridade() {
+
+            try {
+                let num = prompt('Digite um número');
+                num = parseFloat(num);
+
+                if (isNaN(num)) {
+                    // throw new Error('Digite apenas números');
+                    throw new Error('Digite apenas números');
+                }
+
+                if (num % 2 === 0) {
+                    alert(`O número ${num} é par`);
+                } else {
+                    alert(`O número ${num} é ímpar`);
+                }
+            } catch (err) {
+                alert('Erro: ' + err.message);
+            } finally {
+                alert('Programa finalizado!');
+            }
+
+        }
+
+        paridade();
+
+    </script>
+
+</body>
+
+</html>
