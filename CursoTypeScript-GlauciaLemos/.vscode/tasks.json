@@ -1,0 +1,25 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "typescript",
+			"tsconfig": "Modulo-01/helloworld/tsconfig.json",
+			"option": "watch",
+			"problemMatcher": [
+				"$tsc-watch"
+			],
+			"group": "build",
+			"label": "tsc: watch - Modulo-01/helloworld/tsconfig.json"
+		},
+		{
+			"type": "typescript",
+			"tsconfig": "Modulo-02/typeAnnotation/tsconfig.json",
+			"option": "watch",
+			"problemMatcher": [
+				"$tsc-watch"
+			],
+			"group": "build",
+			"label": "tsc: watch - Modulo-02/typeAnnotation/tsconfig.json"
+		}
+	]
+}
