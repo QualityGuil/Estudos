@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso de jQuery - Aula 2</title>
+        <script src="../jquery-3.7.1.js"></script>
+</head>
+<body>
+    
+    <div id="calc">
+
+        <label for="">Valor 1</label>
+        <input type="text" id="v1" value="">
+        <br>
+        <br>
+        <label for="">Valor 2</label>
+        <input type="text" id="v2" value="">
+        <br>
+        <br>
+        <label for="">Resultado</label>
+        <input type="text" id="res" value="0">
+        <br>
+        <br>
+        <button id="btn_somarjs">Somar JS</button>
+        <button id="btn_somarjq">Somar JQ</button>
+
+    </div>
+
+    <script>
+
+        // função feita com JS
+        // Seleciona o item e coloca na variável
+        let btnSomarJS = document.querySelector("#btn_somarjs").addEventListener('click', () => {
+            
+            let valor1 = parseFloat(document.getElementById('v1').value);
+            let valor2 = parseFloat(document.getElementById('v2').value);
+            let soma = valor1 + valor2
+            let resultado = document.getElementById('res').value = soma;
+
+            // let resultado = document.getElementById('res').value = parseFloat(document.getElementById('v1').value) + parseFloat(document.getElementById('v2').value);
+
+        });
+
+        // função feita com jQuery
+        // Aponto para o item que quero trabalhar
+        $('#btn_somarjq').click(() => {
+            let v1 = parseFloat($("#v1").val()) // Captura o valor
+            let v2 = parseFloat($("#v2").val())
+
+            let soma = v1 + v2;
+
+            $("#res").val(soma); // Insere o valor
+
+        })
+
+    </script>
+
+</body>
+</html>
